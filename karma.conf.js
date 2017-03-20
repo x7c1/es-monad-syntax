@@ -35,7 +35,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     //   e.g.
-    //   $ env KARMA_SPECS="tests/foobar.spec.js" node_modules/karma/bin/karma start
+    //   $ env KARMA_SPECS="tests/foobar.spec.js" $(npm bin)/karma start
     files: getSpecs(process.env.KARMA_SPECS),
 
     // list of files to exclude
