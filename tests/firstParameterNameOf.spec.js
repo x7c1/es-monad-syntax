@@ -13,7 +13,10 @@ const arrow = {
 };
 
 const normal = {
-  withParenthesis: function (x1) {
+  oneParameter: function (x1) {
+    console.log('nop');
+  },
+  twoParameters: function (y1, y2) {
     console.log('nop');
   },
 };
@@ -36,8 +39,13 @@ describe('firstParameterNameOf()', () => {
   });
 
   describe('normal function', () => {
+
     it('can return the name of a parameter in parenthesis', () => {
-      expect(firstParameterNameOf(normal.withParenthesis)).to.equal('x1');
+      expect(firstParameterNameOf(normal.oneParameter)).to.equal('x1');
+    });
+
+    it('can return the first name of two parameters in parenthesis', () => {
+      expect(firstParameterNameOf(normal.twoParameters)).to.equal('y1');
     });
   });
 
