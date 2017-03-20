@@ -12,6 +12,12 @@ const arrow = {
   },
 };
 
+const normal = {
+  withParenthesis: function (x1) {
+    console.log('nop');
+  },
+};
+
 describe('firstParameterNameOf()', () => {
 
   describe('arrow function', () => {
@@ -26,6 +32,12 @@ describe('firstParameterNameOf()', () => {
 
     it("can return the name of a parameter not surrounded in parenthesis", () => {
       expect(firstParameterNameOf(arrow.noParenthesis)).to.equal('z1');
+    });
+  });
+
+  describe('normal function', () => {
+    it('can return the name of a parameter in parenthesis', () => {
+      expect(firstParameterNameOf(normal.withParenthesis)).to.equal('x1');
     });
   });
 
