@@ -5,7 +5,7 @@ const forArrowFunction = f => {
 };
 
 const forNormalFunction = f => {
-  const matches = f.toString().match(/^\s*function\s*\(?([^,^)]+)(,.+)?\)/);
+  const matches = f.toString().match(/^\s*function\s*[^(]*\(([^,^)]+)(,.+)?\)/);
   return matches && matches[1];
 };
 
