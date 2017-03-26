@@ -1,4 +1,5 @@
 import firstParameterNameOf from '../src/firstParameterNameOf';
+import { expect } from 'chai';
 
 const arrow = {
   withParenthesis: (x1) => {

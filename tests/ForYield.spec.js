@@ -1,5 +1,6 @@
 import { For } from '../src/ForYield'
 import { some, none } from './MonadExample'
+import { expect } from 'chai';
 
 describe('ForYield', () => {
 
